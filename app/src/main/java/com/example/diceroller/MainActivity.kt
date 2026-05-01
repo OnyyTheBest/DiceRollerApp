@@ -55,12 +55,18 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
         3 -> R.drawable.dice_3
         4 -> R.drawable.dice_4
         5 -> R.drawable.dice_5
-        else -> R.drawable.dice_6
+        6 -> R.drawable.dice_6
+        7 -> R.drawable.dice_7
+        8 -> R.drawable.dice_8
+        9 -> R.drawable.dice_9
+        10 -> R.drawable.dice_10
+        11 -> R.drawable.dice_11
+        else -> R.drawable.dice_12
     }
     Column(modifier=modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         Image(painter = painterResource(id = imageResource), contentDescription = result.toString())
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { result=(1..6).random()}) {
+        Button(onClick = { result=(1..12).random()}) {
 
             Text(stringResource(R.string.roll))
         }
